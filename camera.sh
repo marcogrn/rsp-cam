@@ -23,4 +23,8 @@ drive push camera/image-*
 # remove the files whose name begins with image-
 rm camera/image-*
 
+# now you just need to setup a basic CRON to execute this script
+# es. */30 * * * * yes | /home/pi/camera.sh > /dev/null 2>&1
+# the example above execute the script - in silent mode, and forcing yes answer -  every 30min
+
 # so long and thanks for all the fish
