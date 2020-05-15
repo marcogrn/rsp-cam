@@ -15,13 +15,13 @@ DATE=$(date +"%Y-%m-%d_%H%M")
 # full documentation here: https://www.raspberrypi.org/app/uploads/2013/07/RaspiCam-Documentation.pdf
 raspistill -o camera/image-$DATE.jpg -q 5
 
-# come to daddy
+# come to daddy require google drive ARM command line!
 # uploads all the files whose name begins with image-
-drive push camera/image-*
+# drive push camera/image-*
 
 # save memory
 # remove the files whose name begins with image-
-rm camera/image-*
+# rm camera/image-*
 
 # now you just need to setup a basic CRON to execute this script
 # es. */30 * * * * yes | /home/pi/camera.sh > /dev/null 2>&1
